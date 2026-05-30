@@ -37,24 +37,24 @@ export default function Page() {
             <br /> <span className="text-red-400">Multimedia Editor</span>{" "}
           </h1>{" "}
           {/* BUTTON */}{" "}
-          <div className="flex flex-wrap items-center gap-5 mt-10">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-10 w-full">
             {" "}
-            {/* HUBUNGI */}{" "}
-            <Link href="/#kontak">
-              <button className="px-8 h-14 rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-semibold shadow-lg shadow-purple-500/30 hover:scale-105 hover:shadow-purple-500/50 transition-all duration-300">
+            {/* HUBUNGI */}
+            <Link href="/#kontak" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto px-8 h-14 min-w-[220px] rounded-full bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-semibold shadow-lg shadow-purple-500/30 hover:scale-105 hover:shadow-purple-500/50 transition-all duration-300">
                 Hubungi Saya
               </button>
             </Link>
-            {/* DOWNLOAD CV */}{" "}
+            {/* DOWNLOAD CV */}
             <a
               href="https://drive.google.com/uc?export=download&id=1RFchpOI1fXne80oLFVE4TiL1aoWXW2BJ"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 h-14 rounded-full border-2 border-purple-400 text-purple-500 font-semibold bg-white/4 backdrop-blur-md hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 h-14 min-w-[220px] rounded-full border-2 border-purple-400 text-purple-500 font-semibold bg-white/4 backdrop-blur-md hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
             >
               Download CV
             </a>
-          </div>{" "}
+          </div>
           {/* SOCIAL ICON */}{" "}
           <div className="flex items-center gap-5 mt-10">
             <a

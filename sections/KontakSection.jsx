@@ -89,7 +89,7 @@ export default function KontakSection() {
                 : "text-slate-800"
             }`}
           >
-            Kontak Saya
+            Hubungi Saya
           </h3>
 
           <div className="space-y-4">
