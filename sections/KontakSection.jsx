@@ -46,21 +46,23 @@ export default function KontakSection() {
   return (
     <section
       id="kontak"
-      className={`relative overflow-hidden py-24 px-6 lg:px-20 transition-colors duration-300 ${
-        theme === "dark" ? "bg-[#050816]" : "bg-slate-100"
+      className={`relative overflow-hidden py-24 px-5 sm:px-6 lg:px-20 transition-colors duration-300 ${
+        theme === "dark"
+          ? "bg-[#050816]"
+          : "bg-slate-100"
       }`}
     >
-      {/* Glow Background */}
+      {/* Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-[140px] rounded-full" />
 
-      {/* HEADER */}
-      <div className="text-center mb-16 relative z-10">
+      {/* Header */}
+      <div className="text-center mb-14 relative z-10">
         <span className="px-5 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/20 text-cyan-400 text-sm">
           Contact
         </span>
 
         <h2
-          className={`mt-5 text-4xl font-bold ${
+          className={`mt-5 text-3xl sm:text-4xl font-bold ${
             theme === "dark"
               ? "text-white"
               : "text-slate-800"
@@ -72,9 +74,9 @@ export default function KontakSection() {
 
       <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 relative z-10">
 
-        {/* LEFT - CONTACT INFO */}
+        {/* LEFT */}
         <div
-          className={`rounded-3xl border p-8 backdrop-blur-xl ${
+          className={`rounded-3xl border p-5 sm:p-8 backdrop-blur-xl ${
             theme === "dark"
               ? "bg-slate-900/50 border-slate-800"
               : "bg-white border-slate-200"
@@ -90,24 +92,24 @@ export default function KontakSection() {
             Kontak Saya
           </h3>
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             {contactInfo.map((item, index) => (
               <div
                 key={index}
-                className={`flex items-start gap-4 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                className={`flex items-start gap-4 p-4 sm:p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   theme === "dark"
                     ? "bg-slate-800/50 hover:bg-slate-800"
                     : "bg-slate-50 hover:bg-slate-100"
                 }`}
               >
-                {/* Icon */}
+                {/* ICON */}
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center bg-slate-800/30 ${item.color}`}
+                  className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center bg-slate-800/30 ${item.color}`}
                 >
                   {item.icon}
                 </div>
 
-                {/* Text */}
+                {/* TEXT */}
                 <div className="flex-1 min-w-0">
                   <h4
                     className={`font-semibold text-lg ${
@@ -124,7 +126,7 @@ export default function KontakSection() {
                       href={item.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`mt-1 block break-words text-sm sm:text-base transition hover:text-cyan-400 ${
+                      className={`mt-1 block w-full break-all text-sm sm:text-base transition hover:text-cyan-400 ${
                         theme === "dark"
                           ? "text-slate-400"
                           : "text-slate-600"
@@ -134,7 +136,7 @@ export default function KontakSection() {
                     </a>
                   ) : (
                     <p
-                      className={`mt-1 break-words text-sm sm:text-base ${
+                      className={`mt-1 w-full break-all text-sm sm:text-base ${
                         theme === "dark"
                           ? "text-slate-400"
                           : "text-slate-600"
@@ -149,9 +151,9 @@ export default function KontakSection() {
           </div>
         </div>
 
-        {/* RIGHT - CONTACT FORM */}
+        {/* RIGHT FORM */}
         <div
-          className={`rounded-3xl border p-8 backdrop-blur-xl ${
+          className={`rounded-3xl border p-5 sm:p-8 backdrop-blur-xl ${
             theme === "dark"
               ? "bg-slate-900/50 border-slate-800"
               : "bg-white border-slate-200"
@@ -169,7 +171,6 @@ export default function KontakSection() {
 
           <form className="space-y-5">
 
-            {/* NAME */}
             <input
               type="text"
               placeholder="Your Name"
@@ -180,7 +181,6 @@ export default function KontakSection() {
               }`}
             />
 
-            {/* EMAIL */}
             <input
               type="email"
               placeholder="Your Email"
@@ -191,7 +191,6 @@ export default function KontakSection() {
               }`}
             />
 
-            {/* SUBJECT */}
             <input
               type="text"
               placeholder="Subject"
@@ -202,7 +201,6 @@ export default function KontakSection() {
               }`}
             />
 
-            {/* MESSAGE */}
             <textarea
               rows={6}
               placeholder="Write your message..."
@@ -213,7 +211,6 @@ export default function KontakSection() {
               }`}
             />
 
-            {/* BUTTON */}
             <button
               type="submit"
               className="w-full py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-600 transition-all duration-300 text-white font-semibold flex items-center justify-center gap-2 hover:scale-[1.02]"
