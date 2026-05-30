@@ -9,7 +9,7 @@ import {
   Send,
 } from "lucide-react";
 
-export default function KontakSections() {
+export default function KontakSection() {
   const { theme } = useThemeContext();
 
   const contactInfo = [
@@ -18,24 +18,28 @@ export default function KontakSections() {
       value: "Bandar Lampung, Lampung, Indonesia",
       icon: <MapPin size={22} />,
       color: "text-cyan-400",
+      link: null,
     },
     {
       title: "Nomor HP",
       value: "+62 858-3548-8425",
       icon: <Phone size={22} />,
       color: "text-green-400",
+      link: "tel:+6285835488425",
     },
     {
       title: "WhatsApp",
       value: "+62 887-4760-7844",
       icon: <MessageCircle size={22} />,
       color: "text-emerald-400",
+      link: "https://wa.me/6288747607844",
     },
     {
       title: "Email",
       value: "romzazikrianmuhammad@gmail.com",
       icon: <Mail size={22} />,
       color: "text-red-400",
+      link: "mailto:romzazikrianmuhammad@gmail.com",
     },
   ];
 
@@ -57,14 +61,17 @@ export default function KontakSections() {
 
         <h2
           className={`mt-5 text-4xl font-bold ${
-            theme === "dark" ? "text-white" : "text-slate-800"
+            theme === "dark"
+              ? "text-white"
+              : "text-slate-800"
           }`}
         >
           Kontak Saya
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 relative z-10">
+      <div className="grid lg:grid-cols-2 gap-6 lg:gap-10 relative z-10">
+
         {/* LEFT - CONTACT INFO */}
         <div
           className={`rounded-3xl border p-8 backdrop-blur-xl ${
@@ -93,13 +100,15 @@ export default function KontakSections() {
                     : "bg-slate-50 hover:bg-slate-100"
                 }`}
               >
+                {/* Icon */}
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center bg-slate-800/30 ${item.color}`}
                 >
                   {item.icon}
                 </div>
 
-                <div>
+                {/* Text */}
+                <div className="flex-1 min-w-0">
                   <h4
                     className={`font-semibold text-lg ${
                       theme === "dark"
@@ -110,15 +119,30 @@ export default function KontakSections() {
                     {item.title}
                   </h4>
 
-                  <p
-                    className={`mt-1 ${
-                      theme === "dark"
-                        ? "text-slate-400"
-                        : "text-slate-600"
-                    }`}
-                  >
-                    {item.value}
-                  </p>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`mt-1 block break-words text-sm sm:text-base transition hover:text-cyan-400 ${
+                        theme === "dark"
+                          ? "text-slate-400"
+                          : "text-slate-600"
+                      }`}
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p
+                      className={`mt-1 break-words text-sm sm:text-base ${
+                        theme === "dark"
+                          ? "text-slate-400"
+                          : "text-slate-600"
+                      }`}
+                    >
+                      {item.value}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
@@ -144,57 +168,50 @@ export default function KontakSections() {
           </h3>
 
           <form className="space-y-5">
+
             {/* NAME */}
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
-                  theme === "dark"
-                    ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
-                    : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
-                }`}
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Your Name"
+              className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
+                theme === "dark"
+                  ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
+                  : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
+              }`}
+            />
 
             {/* EMAIL */}
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
-                  theme === "dark"
-                    ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
-                    : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
-                }`}
-              />
-            </div>
+            <input
+              type="email"
+              placeholder="Your Email"
+              className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
+                theme === "dark"
+                  ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
+                  : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
+              }`}
+            />
 
             {/* SUBJECT */}
-            <div>
-              <input
-                type="text"
-                placeholder="Subject"
-                className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
-                  theme === "dark"
-                    ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
-                    : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
-                }`}
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Subject"
+              className={`w-full rounded-2xl px-5 py-4 outline-none border transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
+                theme === "dark"
+                  ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
+                  : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
+              }`}
+            />
 
             {/* MESSAGE */}
-            <div>
-              <textarea
-                rows={6}
-                placeholder="Write your message..."
-                className={`w-full rounded-2xl px-5 py-4 outline-none border resize-none transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
-                  theme === "dark"
-                    ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
-                    : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
-                }`}
-              />
-            </div>
+            <textarea
+              rows={6}
+              placeholder="Write your message..."
+              className={`w-full rounded-2xl px-5 py-4 outline-none border resize-none transition-all duration-300 focus:ring-2 focus:ring-cyan-500 ${
+                theme === "dark"
+                  ? "bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
+                  : "bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400"
+              }`}
+            />
 
             {/* BUTTON */}
             <button
@@ -204,6 +221,7 @@ export default function KontakSections() {
               <Send size={20} />
               Send Message
             </button>
+
           </form>
         </div>
       </div>
