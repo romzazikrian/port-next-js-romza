@@ -32,9 +32,8 @@ export default function Page() {
               M. Romza Zikrian{" "}
             </span>{" "}
             <br /> <span className="text-red-400">
-              Website Developer &
+              Website Developer
             </span>{" "}
-            <br /> <span className="text-red-400">Multimedia Editor</span>{" "}
           </h1>{" "}
           {/* BUTTON */}{" "}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-10 w-full">
