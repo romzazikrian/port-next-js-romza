@@ -25,17 +25,15 @@ export default function Page() {
           {" "}
           {/* TITLE */}{" "}
           <h1 className="mt-4 text-3xl sm:text-5xl lg:text-5xl font-extrabold leading-tight max-w-[750px]">
-  Hello,
-  <br />
-  This Is{" "}
-  <span className="bg-gradient-to-r from-[#923FEF] to-[#C35DE8] bg-clip-text text-transparent">
-    M. Romza Zikrian
-  </span>
-  <br />
-  <span className="text-red-400">
-    I&apos;m a Website Developer
-  </span>
-</h1>
+            Hello,
+            <br />
+            This Is{" "}
+            <span className="bg-gradient-to-r from-[#923FEF] to-[#C35DE8] bg-clip-text text-transparent">
+              M. Romza Zikrian
+            </span>
+            <br />
+            <span className="text-red-400">I&apos;m a Website Developer</span>
+          </h1>
           {/* BUTTON */}{" "}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-10 w-full">
             {" "}

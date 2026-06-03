@@ -7,7 +7,6 @@ export default function Footer() {
 
   return (
     <footer className="relative mt-40 px-6 md:px-16 lg:px-24 xl:px-32 overflow-hidden">
-
       {/* BACKGROUND GLOW */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute w-[300px] h-[300px] bg-purple-600/20 blur-3xl rounded-full bottom-0 left-10"></div>
@@ -18,17 +17,13 @@ export default function Footer() {
       <div className="border-t border-slate-800/60 pt-6" />
 
       {/* BOTTOM */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-3 py-6 text-sm text-slate-500">
-
+      <div className="flex items-center justify-center py-6 text-sm text-slate-500">
         <p>
           © {new Date().getFullYear()}{" "}
-          <span className="text-purple-400 font-medium">Romza</span>. All rights reserved.
+          <span className="text-purple-400 font-medium">
+            Developer Portfolio by M. Romza Zikrian
+          </span>
         </p>
-
-        <p className="text-slate-600 hover:text-slate-400 transition">
-          Built with Next.js & Tailwind CSS
-        </p>
-
       </div>
     </footer>
   );
