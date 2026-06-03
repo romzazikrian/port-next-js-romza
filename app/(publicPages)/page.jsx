@@ -17,14 +17,14 @@ export default function Page() {
       {/* HERO SECTION */}{" "}
       <div
         id="beranda"
-        className="grid lg:grid-cols-2 gap-10 items-center px-8 lg:px-20 pt-36 pb-20 min-h-screen bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover"
+        className="grid lg:grid-cols-2 gap-10 items-center px-8 lg:px-20 pt-37 pb-20 min-h-screen bg-[url('/assets/light-hero-gradient.svg')] dark:bg-[url('/assets/dark-hero-gradient.svg')] bg-no-repeat bg-cover"
       >
         {" "}
         {/* LEFT CONTENT */}{" "}
         <div className="text-center lg:text-left flex flex-col items-center lg:items-start justify-center">
           {" "}
           {/* TITLE */}{" "}
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] max-w-[750px]">
+          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-[1.1] max-w-[750px]">
             {" "}
             Hi, I'm{" "}
             <span className="bg-gradient-to-r from-[#923FEF] to-[#C35DE8] bg-clip-text text-transparent">
