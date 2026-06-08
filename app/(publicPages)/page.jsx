@@ -32,7 +32,7 @@ export default function Page() {
               M. Romza Zikrian
             </span>
             <br />
-            <span className="text-red-400">I&apos;m a Website Developer</span>
+            <span className="text-red-400">I&apos;m a Website Developer & Administration</span>
           </h1>
           {/* BUTTON */}{" "}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 mt-10 w-full">
@@ -133,7 +133,7 @@ export default function Page() {
                 <span className="text-white">:</span>{" "}
                 <span className="text-orange-300">
                   {" "}
-                  "Website Developer & Multimedia Editor"{" "}
+                  "Website Developer & Administration"{" "}
                 </span>{" "}
                 <span className="text-white">,</span>{" "}
               </p>{" "}
