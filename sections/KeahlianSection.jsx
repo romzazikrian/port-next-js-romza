@@ -22,81 +22,70 @@ export default function KeahlianSection() {
   const hardSkills = [
     {
       name: "Laravel",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
     },
     {
       name: "Next.js",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     },
     {
       name: "Bootstrap",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     },
     {
       name: "CSS",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
       name: "Python",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     },
     {
       name: "Java",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     },
     {
       name: "HTML",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     },
     {
       name: "MySQL",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
       name: "Firebase",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
     },
     {
       name: "Oracle",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
     },
   ];
 
   const softwareSkills = [
     {
       name: "Canva",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
     },
     {
       name: "Photoshop",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg",
     },
     {
       name: "Premiere Pro",
-      icon:
-        "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
+      icon: "https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg",
     },
     {
       name: "Microsoft Office",
-      icon:
-        "https://img.icons8.com/color/480/microsoft-office-2019.png",
+      icon: "https://img.icons8.com/color/480/microsoft-office-2019.png",
     },
     {
       name: "GitHub",
-      icon:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     },
   ];
 
@@ -136,9 +125,7 @@ export default function KeahlianSection() {
         <div className="flex items-center gap-3 mb-6">
           <Users className="text-cyan-400" />
 
-          <h3 className="text-2xl font-bold text-cyan-400">
-            Soft Skills
-          </h3>
+          <h3 className="text-2xl font-bold text-cyan-400">Soft Skills</h3>
         </div>
 
         <div className="flex flex-wrap gap-3">
@@ -164,9 +151,7 @@ export default function KeahlianSection() {
         <div className="flex items-center gap-3 mb-8">
           <Code2 className="text-green-400" />
 
-          <h3 className="text-2xl font-bold text-green-400">
-            Hard Skills
-          </h3>
+          <h3 className="text-2xl font-bold text-green-400">Hard Skills</h3>
         </div>
 
         <div className="overflow-hidden">
@@ -189,9 +174,7 @@ export default function KeahlianSection() {
 
                 <p
                   className={`mt-4 text-lg font-semibold ${
-                    theme === "dark"
-                      ? "text-white"
-                      : "text-slate-800"
+                    theme === "dark" ? "text-white" : "text-slate-800"
                   }`}
                 >
                   {skill.name}
@@ -220,40 +203,33 @@ export default function KeahlianSection() {
 
         <div className="overflow-hidden">
           <div className="flex gap-6 w-max animate-marquee-right hover:[animation-play-state:paused]">
-            {[...softwareSkills, ...softwareSkills].map(
-              (skill, index) => (
-                <div
-                  key={index}
-                  className={`min-w-[180px] h-[180px] rounded-3xl border backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(250,204,21,0.25)]
+            {[...softwareSkills, ...softwareSkills].map((skill, index) => (
+              <div
+                key={index}
+                className={`min-w-[180px] h-[180px] rounded-3xl border backdrop-blur-xl flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-2 hover:border-yellow-500/50 hover:shadow-[0_0_30px_rgba(250,204,21,0.25)]
                   ${
                     theme === "dark"
                       ? "bg-slate-900/60 border-slate-700/50"
                       : "bg-white border-slate-200"
                   }`}
-                >
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className={`w-16 h-16 object-contain transition duration-300 ${
-                      skill.name === "GitHub" &&
-                      theme === "dark"
-                        ? "invert"
-                        : ""
-                    }`}
-                  />
+              >
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className={`w-16 h-16 object-contain transition duration-300 ${
+                    skill.name === "GitHub" && theme === "dark" ? "invert" : ""
+                  }`}
+                />
 
-                  <p
-                    className={`mt-4 text-lg font-semibold ${
-                      theme === "dark"
-                        ? "text-white"
-                        : "text-slate-800"
-                    }`}
-                  >
-                    {skill.name}
-                  </p>
-                </div>
-              )
-            )}
+                <p
+                  className={`mt-4 text-lg font-semibold ${
+                    theme === "dark" ? "text-white" : "text-slate-800"
+                  }`}
+                >
+                  {skill.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

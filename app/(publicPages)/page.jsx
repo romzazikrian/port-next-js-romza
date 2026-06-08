@@ -146,7 +146,7 @@ export default function Page() {
               </p>{" "}
               <div className="ml-12 flex flex-wrap gap-2 my-3">
                 {" "}
-                {["Next.js", "Laravel", "React", "Tailwind", "PHP", "Java"].map(
+                {["Next.js", "Laravel", "React", "Tailwind", "PHP", "Java", "JavaScript"].map(
                   (skill, index) => (
                     <span
                       key={index}
